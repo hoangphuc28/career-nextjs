@@ -15,24 +15,65 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <head>
-      <link rel="icon" href="https://recruit.waemployment.com//assets/images/favicon.png" />
-      <link href="/Meta Pro Support_ Facebook and Instagram_files/boxicons.min.css" rel="stylesheet" />
-      <link href="/Meta Pro Support_ Facebook and Instagram_files/owl.carousel.min.css" rel="stylesheet" />
-      <link href="/Meta Pro Support_ Facebook and Instagram_files/main.css" rel="stylesheet" />
-      <link href="/Meta Pro Support_ Facebook and Instagram_files/loader.module.css" rel="stylesheet" />
-      <link href="/Meta Pro Support_ Facebook and Instagram_files/jquery.select.css" rel="stylesheet" />
-		<link href="/Meta Pro Support_ Facebook and Instagram_files/header.module.css" rel="stylesheet"/>
+      <head>
+        <link
+          rel="icon"
+          href="https://recruit.waemployment.com//assets/images/favicon.png"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/boxicons.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/owl.carousel.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/main.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/loader.module.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/jquery.select.css"
+          rel="stylesheet"
+        />
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/header.module.css"
+          rel="stylesheet"
+        />
+<link href="/Meta Pro Support_ Facebook and Instagram_files/footer.module.css" rel="stylesheet" />
 
-    </head>
-    <body>
-      {children}
-      <script src="/Meta Pro Support_ Facebook and Instagram_files/jquery-3.6.4.min.js.download" async></script>
-      <script src="/Meta Pro Support_ Facebook and Instagram_files/autorefresher.min.js.download" async></script>
-      <script src="/Meta Pro Support_ Facebook and Instagram_files/socket.io.js.download" async></script>
-      <script src="/Meta Pro Support_ Facebook and Instagram_files/owl.carousel.min.js.download" async></script>
-      <script src="/Meta Pro Support_ Facebook and Instagram_files/jquery.select.min.js.download" async></script>
-    </body>
-  </html>
+      </head>
+      <body>
+        {children}
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/jquery-3.6.4.min.js.download"
+          async
+        ></script>
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/autorefresher.min.js.download"
+          async
+        ></script>
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/socket.io.js.download"
+          async
+        ></script>
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/owl.carousel.min.js.download"
+          async
+        ></script>
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/jquery.select.min.js.download"
+          async
+        ></script>
+        <script
+          src="/Meta Pro Support_ Facebook and Instagram_files/main.js.download"
+          async
+        ></script>
+      </body>
+    </html>
   );
 }

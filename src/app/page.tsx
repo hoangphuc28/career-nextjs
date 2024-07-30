@@ -25,7 +25,7 @@ export default function Home() {
         <div className="searchIcon">
           <i className="bx bx-search" />
         </div>
-        <a className="login" href="https://recruit.waemployment.com/login">
+        <a className="login">
           Log in
           {/*-<i class='bx bx-chevron-down bx-flip-vertical' ></i> */}
           <i className="bx bx-chevron-down" />
