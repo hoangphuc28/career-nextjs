@@ -1,0 +1,293 @@
+.jobs {
+    margin-top: 60px;
+    background-color: #f7f7f7;
+}
+
+.jobs .container {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.jobs .holder {
+    display: flex;
+    gap: 100px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.jobs .holder .filters {
+    width: 30%;
+}
+.jobs .holder .filters > h1 {
+    color: #232323;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    line-height: 50px;
+    text-decoration: none;
+}
+.jobs .holder .filters .search {
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+.jobs .holder .filters .search button {
+    height: 45px;
+    background-color: #505e6b;
+    color: #FFF;
+    padding: 12px 15px 10px;
+    font-size: 16px;
+    letter-spacing: .9px;
+    outline: none;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+.jobs .holder .filters .search input {
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    color: #65798a;
+    font-size: 14px;
+    letter-spacing: .9px;
+    line-height: 20px;
+    padding: 0 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.jobs .holder .filters .heading {
+    display: flex;
+    justify-content: space-between;
+}
+.jobs .holder .filters .heading button {
+    font-size: 14px;
+    letter-spacing: .4px;
+    line-height: 27px;
+    padding-bottom: 0;
+    color: #67788a;
+    background-color: transparent;
+    border: transparent;
+    font-weight: 500;
+}
+.jobs .holder .filters .heading h5 {
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 1.44px;
+    line-height: 24px;
+}
+.jobs .holder .filters hr {
+    border: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    height: 0;
+    margin: 24px 0;
+    width: 100%;
+    background-color: #dadde1;
+    color: #dadde1;
+}
+.jobs .holder .filters .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.jobs .holder .filters .title.mb-0 {
+    margin-bottom: 0;
+}
+.jobs .holder .filters .title h4 {
+    font-size: 16px;
+    letter-spacing: .8px;
+    line-height: 24px;
+    color: #1C2B33;
+    font-weight: 500;
+}
+.jobs .holder .filters .title i {
+    color: #1C2B33;
+    opacity: 0.4;
+    font-size: 16px;
+}
+.jobs .filters .item {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #67788a;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .8px;
+    line-height: 24px;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  
+  .jobs .filters .item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .jobs .filters .item .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    min-width: 20px;
+    padding: 0;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ced0d4;
+    border-radius: 4px;
+  }
+  
+  .jobs .filters .item .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .jobs .filters .item input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .jobs .filters .item .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid rgba(0,100,224, 0.4);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+
+
+.jobs .holder .listings {
+    width: 70%;
+}
+.jobs .holder .listings .heading {
+    border: 1px solid #dee5f5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 0 30px;
+    max-width: 672px;
+    padding: 26px 15px;
+}
+.jobs .holder .listings .heading h3 {
+    color: #232323;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    line-height: 32px;
+}
+.jobs .holder .listings .heading h6 {
+    background-color: transparent;
+    color: #38444f;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 0 5px;
+}
+.jobs .holder .listings .sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jobs .holder .listings .sort p {
+    color: #67788a;
+    font-size: 14px;
+    letter-spacing: .4px;
+    line-height: 27px;
+    font-weight: 500;
+}
+.jobs .holder .listing {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    display: flex;
+    margin: 12px 0;
+    overflow-x: hidden;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.jobs .holder .listing h2 {
+    color: #1c2b33;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: .96px;
+    line-height: 34px;
+}
+.jobs .holder .listing hr {
+    border: .5px solid #dee5f5;
+    box-sizing: border-box;
+    height: 1px;
+    margin: 14px auto;
+    width: 100%;
+}
+.jobs .holder .listing .infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jobs .holder .listing .infos .info {
+    width: 33.33%;
+    margin-right: 10px;
+    border-right: .5px solid #dee5f5;
+}
+.jobs .holder .listing .infos .info p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #67788a;
+    letter-spacing: .4px;
+}
+.jobs .holder .listing .infos .info .icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.jobs .holder .listing .infos .info i {
+    color: #67788a;
+}
+
+@media only screen and (max-width: 1024px) {
+    .jobs .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .jobs .holder {
+        gap: 0;
+        flex-direction: column;
+    }
+    .jobs .holder .filters {
+        width: 100%;
+    }
+    .jobs .holder .filters > h1 {
+        font-size: 26px;
+    }
+    .jobs .holder .filters .search {
+        margin-top: 22px;
+        margin-bottom: 30px;
+    }
+    .jobs .holder .filters .filters-content {
+        display: none;
+    }
+    .jobs .holder .listings {
+        width: 100%;
+    }
+    .jobs .holder .listing h2 {
+        font-size: 20px;
+    }
+}

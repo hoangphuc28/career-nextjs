@@ -1,0 +1,721 @@
+.home_con .banner {
+  position: relative;
+}
+.home_con .banner-bg {
+  background-color: #25D366;
+  position: absolute;
+  height: 55%;
+  width: 100%;
+  z-index: -1;
+}
+
+.home_con .banner .content {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+}
+
+.home_con .banner .content .information {
+  width: 35%;
+}
+.home_con .banner .content .banner-image {
+  width: 65%;
+}
+
+.home_con .banner .content .banner-image img {
+  max-width: 100%;
+  min-height: 520px;
+  object-fit: cover;
+}
+.home_con .banner-image .text {
+  margin: 80px 40px 0;
+  max-width: 80%;
+}
+.home_con .banner-image .text h2 {
+  color: #1c2b33;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 50px;
+  margin-bottom: 24px;
+}
+.home_con .banner-image .text p {
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 28px;
+  font-weight: 500;
+  color: #000;
+}
+.home_con .information .text {
+  margin-top: 90px;
+}
+.home_con .information img {
+  margin-top: 80px;
+}
+.home_con .information h5 {
+  letter-spacing: 1.6px;
+  line-height: 16px;
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 400;
+}
+.home_con .information h1 {
+  padding-top: 15px;
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+}
+.home_con .information div.call {
+  animation: 1.3s ease-out 0s 1 slideIn;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: .9px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.home_con .information div.call .icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+.home_con .information div.call .icon i {
+  font-size: 22px;
+}
+
+.home_con .teams {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  margin-top: 60px;
+}
+.home_con .teams .team {
+  width: 100%;
+}
+.home_con .teams .team img {
+  width: 100%;
+  height: 340px;
+  max-height: 100%;
+  object-fit: cover;
+}
+.home_con .teams .team > div {
+  margin-top: 15px;
+}
+.home_con .teams .team p {
+  color: #232323;
+  font-size: 14px;
+  letter-spacing: .28px;
+  line-height: 27px;
+}
+
+.home_con .why-join {
+  gap: 50px;
+  display: flex;
+  margin-top: 140px;
+  align-items: center;
+  justify-content: center;
+}
+.home_con .why-join h2 {
+  color: #1c2b33;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 50px;
+}
+.home_con .why-join p {
+  width: 500px;
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: 32px;
+  color: #000;
+  font-weight: 500;
+}
+
+.home_con .challenges {
+  margin-top: 160px;
+  background-color: #128C7E;
+}
+.home_con .challenges .container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+.home_con .challenges h3 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  line-height: 50px;
+}
+.home_con .challenges .content {
+  display: flex;
+  margin-top: 20px;
+  background-color: #FFF;
+}
+.home_con .challenges .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home_con .challenges .content > div {
+  width: 50%;
+}
+.home_con .challenges .text p {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 90px;
+}
+.home_con .challenges .text p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.home_con .news {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 190px;
+}
+.home_con .news h1 {
+  color: inherit;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 70.4px;
+  text-align: center;
+}
+.home_con .news .content {
+  gap: 20px;
+  display: flex;
+  margin-top: 25px;
+}
+.home_con .news .new {
+  width: 100%;
+}
+.home_con .news .new:hover p,
+.home_con .news .new:hover span {
+  text-decoration: underline;
+}
+.home_con .news .new .image {
+  aspect-ratio: 4 / 3;
+  max-height: 450px;
+  max-width: 600px;
+  overflow: hidden;
+  width: 100%;
+}
+.home_con .news .new img {
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.home_con .news .new img:hover {
+  transform: scale(1.05);
+}
+.home_con .news .new > div {
+  margin-top: 15px;
+}
+.home_con .news .new p {
+  color: #344854;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.home_con .news .new span {
+  color: #344854;
+  font-weight: 500;
+}
+
+
+.home_con .what_we_build {
+  background-color: var(--white);
+  transition: background-color .3s;
+}
+
+.what_we_build .container { 
+  margin: 0 auto;
+  width: 85%;
+  padding: 160px 0;
+  display: flex;
+  gap: 80px;
+}
+
+.what_we_build .container .socials {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.what_we_build .container .socials .item {
+  /* width: 50%; */
+  height: 85px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccd1d4;
+  position: relative;
+}
+
+.what_we_build .container .socials .item:first-child {
+  border-top:  1px solid #ccd1d4;
+}
+
+.what_we_build .container .socials a.item {
+  color: #000;
+}
+
+.what_we_build .container .socials .item span {
+  color: #232323;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 86px;
+}
+.what_we_build .container .socials svg { 
+  width: 35px !important;
+  height: 35px !important;
+  padding-left: 12px;
+  padding-right: 24px;
+}
+
+.what_we_build .container .socials .item:hover .icon {
+  opacity: 1;
+}
+
+.what_we_build .container .socials .icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-new);
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.what_we_build .container .socials .icon i {
+  font-size: 22px;
+  color: var(--gray-new);
+}
+
+.what_we_build .container .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  width: 40%;
+}
+
+.what_we_build .container .heading h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 95px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .what_we_build .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .what_we_build .container {
+    padding: 100px 0;
+  }
+  .what_we_build .container .heading .item:nth-child(2) {
+    display: none;
+  }
+  .what_we_build .container .heading .item {
+    width: 100%;
+  }
+  .what_we_build .container .heading h3 {
+    font-size: 18px;
+  }
+  .what_we_build .container .socials .item {
+    width: 100%;
+    height: 60px;
+  }
+  .what_we_build .container .socials svg {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .what_we_build .container .socials .item span {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .what_we_build .container .socials .item:nth-child(2) {
+    border-top: unset;
+  }
+}
+
+.likely-modal {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #FFF;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  border-width: 1px 1px 1px 4px;
+  border-color: rgb(204, 208, 213) rgb(204, 208, 213) rgb(204, 208, 213) #677b8c;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 12px 0 0 36px;
+  max-width: 540px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.likely-modal .thank-you {
+  margin: 15px 35px 20px 0;
+  font-size: 14px;
+  display: none;
+}
+
+.likely-modal .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  opacity: .7;
+  cursor: pointer;
+}
+
+.likely-modal .title {
+  display: flex;
+  align-items: center;
+  margin-left: -25px;
+}
+.likely-modal .title i {
+  font-size: 20px;
+  color: rgba(37,211,102,0.6);
+}
+.likely-modal .title h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.likely-modal .questions {
+  padding: 12px 30px 12px 0;
+}
+.likely-modal .questions > label {
+  font-size: 14px;
+}
+.likely-modal .questions .first {
+  background-color: #f1f4f7;
+  border-radius: 6px;
+  margin: 9px 0;
+  padding: 16px 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.likely-modal .questions .first.second {
+  flex-direction: column;
+}
+
+.likely-modal .checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+}
+
+.likely-modal .checkbox span.text {
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Hide the browser's default radio button */
+.likely-modal .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.likely-modal .checkbox .checkmark {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.likely-modal .checkbox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.likely-modal .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.likely-modal .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+	border-radius: 50%;
+	background: #25D366;
+  border: 3px solid #fff;
+}
+
+/* The container */
+.likely-modal .radiobox {
+  display: block;
+  position: relative;
+  margin-bottom: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: .3s background-color;
+  box-sizing: border-box;
+}
+.likely-modal .radiobox span.text {
+  margin-left: 8px;
+  font-size: 14px;
+}
+.likely-modal .radiobox:hover {
+  background-color: rgba(0,0,0,.05);
+}
+.likely-modal .radiobox.active {
+  background-color: rgba(37,211,102,.1);
+}
+.likely-modal .radiobox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.likely-modal .radiobox .checkmark {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  min-width: 25px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.likely-modal .radiobox input:checked ~ .checkmark {
+  background-color: #fff;
+}
+.likely-modal .radiobox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.likely-modal .radiobox input:checked ~ .checkmark:after {
+  display: block;
+}
+.likely-modal .radiobox .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 7px;
+  height: 13px;
+  border: solid #25D366;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*Radio box*/
+
+.likely-modal #unlikely,
+.likely-modal #likely {
+  display: none;
+}
+
+.likely-modal .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+  margin-right: 18px;
+}
+
+.likely-modal .actions button {
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: 600;
+  background-color: #677b8c; 
+  border: none;
+  outline: none;
+  line-height: 24px;
+  cursor: pointer;
+}
+.likely-modal .actions button:hover {
+  background-color: #5c6e7e;
+}
+.likely-modal .actions button:first-child {
+  margin-right: 8px;
+  color: rgba(0,0,0,.85);
+  background-color: rgba(0,0,0,.05);
+}
+.likely-modal .actions button:first-child:hover {
+  background-color: rgba(0,0,0,.1);
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .likely-modal {
+    right: 10px;
+    bottom: 15px;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+  .likely-modal .checkbox span.text,
+  .likely-modal .radiobox span.text {
+    font-size: 12px;
+  }
+
+  .home_con .banner .content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .home_con .banner .content .banner-image {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .home_con .banner .content .banner-image img {
+    width: 100%;
+    min-height: 210px;
+  }
+  .home_con .banner .content .information {
+    width: 100%;
+  }
+  .home_con .information .text {
+    width: 80%;
+    margin: 0px auto 0;
+  }
+  .home_con .banner-image .text {
+    width: 90%;
+    max-width: 100%;
+    margin: 80px auto 0;
+  }
+  .home_con .banner-image .text h2 {
+    margin-bottom: 12px;
+  }
+  .home_con .information img {
+    display: none;
+  }
+  .home_con .information h1 {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+  .home_con .information h5 {
+    font-weight: 500;
+  }
+  .home_con .information a.call {
+    margin-top: 20px;
+  }
+
+  .home_con .teams {
+    gap: 30px;
+    width: 85%;
+    flex-direction: column;
+  }
+
+  .home_con .why-join {
+    gap: 15px;
+    width: 90%;
+    align-items: flex-start;
+    margin: 40px auto 0;
+    flex-direction: column;
+  }
+  .home_con .why-join p {
+    width: 100%;
+    letter-spacing: normal;
+    line-height: 32px;
+  }
+
+  .home_con .challenges {
+    margin-top: 40px;
+  }
+  .home_con .challenges .container {
+    width: 90%;
+  }
+  .home_con .challenges h3 {
+    font-size: 32px;
+  }
+  .home_con .challenges .content {
+    flex-direction: column;
+  }
+  .home_con .challenges .content > div {
+    width: 100%;
+  }
+  .home_con .challenges .text p {
+    margin: 50px;
+  }
+
+  .home_con .news {
+    width: 90%;
+    margin-top: 80px;
+  }
+  .home_con .news .content {
+    flex-direction: column;
+  }
+  .home_con .news h1 {
+    font-size: 40px;
+    line-height: 44px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .what_we_build .container {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .what_we_build .container .heading h1 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+  }
+  .what_we_build .container .heading {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .what_we_build .container .socials {
+    width: 100%;
+  }
+}

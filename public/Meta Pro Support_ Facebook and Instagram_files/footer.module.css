@@ -1,0 +1,155 @@
+footer {
+  background-color: #f7f7f7;
+}
+
+.footer {
+  padding: 48px 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+  max-width: 1140px;
+  border-top: 1px solid #a7aaae;
+}
+
+.footer .information {
+  /* padding: 50px 0 40px; */
+}
+.footer .information p {
+  color: #232323;
+  font-size: 13px;
+  letter-spacing: .28px;
+  line-height: 26px;
+  margin-bottom: 18px;
+}
+.footer .information p a {
+  color: inherit;
+  text-decoration: underline;
+} 
+
+.menusContainer {
+  display: flex;
+}
+
+.footer .item {
+  width: 15%;
+}
+
+.footer .item:last-child {
+  width: 40%;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.footer .item .menu {
+  padding: 24px 18px 24px 0;
+  box-sizing: border-box;
+}
+
+.footer .menu span {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--dark-new);
+  /* padding-bottom: 12px; */
+  letter-spacing: .8px;
+  font-weight: 400;
+}
+
+.footer .menu li {
+  padding-bottom: 12px;
+}
+
+.footer .menu li a {
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--dark-new);
+}
+
+.footer .menu li a:hover {
+  color: var(--dark-new);
+}
+
+.footer .menu span i {
+  display: none;
+}
+.footer .report_bug {
+  display: flex;
+  align-items: center;
+}
+.footer .report_bug p,
+.footer .copyright {
+  font-size: 14px;
+  color: var(--dark-new);
+  font-weight: 500;
+  line-height: 1.42858;
+  margin-left: 5px;
+}
+.footer .copyright { 
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer {
+    width: 90%;
+  }
+  .footer .information p {
+    font-size: 14px;
+    letter-spacing: .28px;
+    line-height: 26px;
+  }
+
+  /* .footer .menu ul {
+    display: none;
+  }
+
+  .footer .menu ul.active {
+    display: block;
+  } */
+
+  .footer .item {
+    width: 50%;
+  }
+  .menusContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+  .footer .item .menu {
+    width: 100%;
+    padding-top: 0;
+    padding: 24px 10px 16px;
+  }
+
+  .footer .menu span {
+    display: block;
+    position: relative;
+  }
+
+  .footer .menu span i {
+    display: none;
+  }
+
+  .footer .menu span i.active {
+    transform: rotate(180deg);
+  }
+
+  .footer .menu ul {
+    margin-bottom: 0px;
+  }
+
+  .footer .item:last-child {
+    width: 100%;
+    align-items: flex-start;
+    padding: 24px 10px 16px;
+  }
+
+  .footer .report_bug p, .footer .copyright {
+    font-size: 15px;
+  }
+  .footer .copyright {
+    font-size: 14px;
+    margin-left: 0;
+  }
+}
