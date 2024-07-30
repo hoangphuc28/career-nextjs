@@ -44,8 +44,10 @@ export default function RootLayout({
           href="/Meta Pro Support_ Facebook and Instagram_files/header.module.css"
           rel="stylesheet"
         />
-<link href="/Meta Pro Support_ Facebook and Instagram_files/footer.module.css" rel="stylesheet" />
-
+        <link
+          href="/Meta Pro Support_ Facebook and Instagram_files/footer.module.css"
+          rel="stylesheet"
+        />
       </head>
       <body>
         {children}
