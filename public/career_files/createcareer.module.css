@@ -1,0 +1,331 @@
+.career_container .header {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7
+}
+
+.career_container .header .container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.career_container .header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+.career_container .header:nth-child(2) {
+  border-color: #eaeaea;
+}
+
+.career_container .appointment {
+  width: 1280px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 60px;
+}
+.appointment .banner img {
+  width: 350px; 
+}
+
+.appointment .form {
+  width: 500px;
+}
+
+.appointment .form h3 {
+  color: var(--green);
+  font-size: 24px;
+  letter-spacing: .43px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.appointment .form p {
+  color: rgba(0,0,0,0.5);
+  font-size: 14px;
+  letter-spacing: .23px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.appointment .form i {
+  font-size: 34px;
+  color: var(--blue-new);
+}
+
+span.error {
+  color: #f02849;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 2px;
+  display: none;
+}
+
+.w-50 {
+  display: grid;
+  grid-template-columns: 50% 50%
+}
+.w-50,
+.w-100 {
+  margin-top: 24px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+}
+.input label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0,0,0,.75);
+}
+
+.input input {
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,.15);
+  padding: 7px 11px;
+  line-height: 1.42858!important;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.input .mobile {
+  display: grid;
+  grid-template-columns: 25% 75%
+}
+.input .mobile input {
+  margin-left: 3px;
+}
+
+.w-100 button {
+  background-color: #677b8c;
+  outline: none;
+  border: none;
+  color: #FFF;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  width: calc(100% - 10px);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.w-100 p.login_btn {
+  color: rgba(0,0,0,.85);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.w-100 p.login_btn a {
+  color: rgba(20,97,204,1);
+  line-height: 1.42858!important;
+}
+
+#select {
+  min-width: 100%;
+}
+#select > li span.select-label {
+  box-shadow: unset;
+  padding: 7px 11px;
+  border: 1px solid rgba(0,0,0,.15);
+  line-height: 1.42858!important;
+  font-size: 14px;
+  margin-top: 3px;
+  border-radius: 6px;
+}
+#select > li ul.select-menu .select-list span p {
+  margin-bottom: 0;
+  display: block;
+  text-align: left;
+  color: rgba(0,0,0,.85);
+  font-size: 13px;
+}
+#select > li ul.select-menu .select-list span p:first-child {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(0,0,0,.75);
+}
+
+#select > li ul.select-menu .select-list li span:after {
+  left: 5px;
+  border: 1px solid rgba(0,0,0,.15);
+  width: 20px;
+  height: 20px;
+}
+#select > li ul.select-menu {
+  width: 250px;
+  border-radius: 8px !important;
+  max-height: 250px !important;
+  margin: 3px 0 !important;
+}
+#select > li ul.select-menu .select-search {
+  padding: 0;
+}
+#select > li ul.select-menu .select-search input {
+  margin: 0;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0;
+  background-color: #FFF;
+  padding: 8px 14px 8px 35px;
+  box-sizing: border-box;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-image: url(../images/search-svgrepo-com.png);
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 8px 60%;
+  opacity: 0.75;
+}
+#select > li ul.select-menu .select-search input:focus {
+  border-color: var(--blue-new);
+}
+#select > li ul.select-menu .select-list li {
+  padding: 6px 6px 6px 35px;
+}
+#select > li ul.select-menu:not(.responsive) .select-list li.selected span:before {
+  border-radius: 50%;
+  left: 10px;
+  width: 5px;
+  height: 5px;
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+#select > li ul.select-menu .select-list li.selected,
+#select > li ul.select-menu .select-list li:not(.disabled):not(.selected):hover {
+  background: rgba(24,119,242,.1);
+}
+#select > li ul.select-menu .select-list {
+  padding: 5px 2px;
+}
+#select > li.visible span.select-label, #select > li:hover span.select-label {
+  background-color: #FFF;
+}
+
+@media only screen and (max-width: 1280px) {
+  .career_container .header .container {
+    width: 90%;
+  }
+  
+  .career_container .appointment {
+    width: 90%;
+  }
+  .appointment .banner img {
+    width: 300px; 
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .appointment .banner {
+    display: none;
+  }
+}
+/* Result page */
+.career-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  height: calc(100vh - 112px);
+}
+.career-result h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: rgba(0,0,0,.75);
+}
+.career-result p {
+  color: rgba(0,0,0,.55);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.career-result a {
+  background-color: #EBEDF0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  color: rgba(0,0,0,.75);
+  font-size: 15px;
+}
+.career-result .restrict-txt {
+  margin-top: 15px;
+}
+
+.career-result-footer {
+  background-color: #EBEDF0;
+}
+
+.career-result-footer .container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 32px 40px;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.career-result-footer span {
+  display: block;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 24px;
+  line-height: 1.42858;
+}
+.career-result-footer span a {
+  color: rgba(0,0,0,.55);
+  text-decoration: underline;
+}
+
+.career-result-footer ul li,
+.career-result-footer ul li a {
+  display: block;
+  color: rgba(0,0,0,.55);
+  font-weight: 400;
+}
+.career-result-footer ul li {
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.career-result-footer ul li.copyright {
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.career-result .restrict-pg {
+  max-width: 450px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 920px) {
+  .career-result-footer .container {
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  } 
+  
+  .career-result {
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: calc(100vh - 300px);
+  }
+  .career-result .restrict-pg {
+    max-width: 100%;
+    text-align: center;
+  }
+  .career-result img {
+    width: 100%;
+  }
+}

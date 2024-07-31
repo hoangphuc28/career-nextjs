@@ -1,0 +1,40 @@
+.loaderContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.82);
+  height: 100%;
+}
+
+.loader i {
+  color: #fff;
+  font-size: 32px;
+  opacity: 0.85;
+}
+
+.loaderContainer p {
+  padding-top: 16px;
+  letter-spacing: 0.43px;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.85;
+  text-align: center;
+  line-height: 21px;
+}
