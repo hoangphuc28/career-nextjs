@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+.login-modal {
+  padding: 0 35px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.login-modal.visible {
+  padding: 35px;
+  max-height: 500px;
+}
+.login {
+  cursor: pointer;
+}
+.likely-modal {
+  max-height: 0;
+  padding-top: 0;
+  transition: max-height .5s, padding-top .5s;
+}
+
+.likely-modal.visible {
+  max-height: 600px;
+  padding: 12px 0 0 36px;
+
+}

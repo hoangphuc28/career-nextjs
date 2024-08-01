@@ -363,26 +363,26 @@
 }
 
 .likely-modal {
-  display: none;
+  /* display: none; */
   position: fixed;
   bottom: 30px;
   right: 30px;
   background-color: #FFF;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  border-width: 1px 1px 1px 4px;
-  border-color: rgb(204, 208, 213) rgb(204, 208, 213) rgb(204, 208, 213) #677b8c;
-  border-style: solid;
   border-radius: 4px;
-  padding: 12px 0 0 36px;
   max-width: 540px;
   max-height: 600px;
   overflow-y: auto;
+  padding-left: 36px;
+  border-color: rgb(204, 208, 213) rgb(204, 208, 213) rgb(204, 208, 213) #677b8c;
+  border-style: solid;
+  border-width: 1px 1px 1px 4px;
+
 }
 
 .likely-modal .thank-you {
   margin: 15px 35px 20px 0;
   font-size: 14px;
-  display: none;
 }
 
 .likely-modal .close {
@@ -559,10 +559,10 @@
 }
 /*Radio box*/
 
-.likely-modal #unlikely,
+/* .likely-modal #unlikely,
 .likely-modal #likely {
   display: none;
-}
+} */
 
 .likely-modal .actions {
   display: flex;
