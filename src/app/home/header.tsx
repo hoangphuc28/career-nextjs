@@ -3,6 +3,7 @@ import { Fragment, useState } from "react";
 export default function Header() {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isIconFlipped, setIsIconFlipped] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
     const handleLoginClick = (e: any) => {
         e.preventDefault();
         setIsIconFlipped(!isIconFlipped);
@@ -15,7 +16,10 @@ export default function Header() {
           <button
             className="menuButton"
             type="button"
-            onClick="openMobileMenu()"
+            onClick={() => {
+                setIsOpenMenu(true)
+                console.log(1)
+            }}
           >
             <i className="bx bx-menu" />
           </button>
@@ -72,11 +76,11 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="menuOverlay">
+      <div className={`menuOverlay ${isOpenMenu ? "active" : ""}`}>
         <button
           className="menuButton"
           type="button"
-          onClick="closeMobileMenu()"
+          onClick={() => setIsOpenMenu(false)}
         >
           ✕
         </button>
