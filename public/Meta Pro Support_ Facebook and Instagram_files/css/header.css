@@ -131,10 +131,10 @@ header {
   color: #fff;
 }
 
-/* .menuOverlay {
+.menuOverlay {
   display: none;
   visibility: hidden;
-} */
+}
 
 .menuButton {
   display: none;

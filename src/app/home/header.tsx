@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Fragment, useState } from "react";
 
 export default function Header() {
@@ -28,7 +29,7 @@ export default function Header() {
               <img
                 src="./Meta Pro Support_ Facebook and Instagram_files/logo-white.png"
                 alt="Logo"
-                width="95px"
+                width={95}
               />
             </a>
           </div>
@@ -122,7 +123,7 @@ export default function Header() {
           the interview process, and more.
         </p>
         <a
-          href="https://recruit.waemployment.com/createcareer"
+          href={"createcareer"}
           className="startNow"
         >
           Create Career Profile
@@ -139,7 +140,7 @@ export default function Header() {
           the interview process, and more.
         </p>
         <a
-          href="https://recruit.waemployment.com/createcareer"
+          href={"createcareer"}
           className="create-career"
         >
           Create Career Profile

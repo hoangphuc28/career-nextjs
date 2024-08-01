@@ -377,6 +377,7 @@
   border-color: rgb(204, 208, 213) rgb(204, 208, 213) rgb(204, 208, 213) #677b8c;
   border-style: solid;
   border-width: 1px 1px 1px 4px;
+  z-index:99
 
 }
 
