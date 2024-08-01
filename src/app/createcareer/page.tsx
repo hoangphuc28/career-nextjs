@@ -1069,7 +1069,7 @@ export default function CareerPage() {
                       className="prefix"
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     >
-                      <li className="down">
+                      <li className={`up ${isDropdownOpen ? "visible" : ""}`}>
                         <span className="select-label">
                           {selectedPrefix.value}
                         </span>

@@ -19,7 +19,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@style/*": ["./public/Meta Pro Support_ Facebook and Instagram_files/css/*"]
+      "@style/*": ["./public/Meta Pro Support_ Facebook and Instagram_files/css/*"],
+      "@careerstyle/*": ["./public/career_files/css/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/createcareer/page.tsx"],
