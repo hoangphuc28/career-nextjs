@@ -368,7 +368,7 @@ export default function CareerPage() {
       <div className="career_container">
         <div className="header">
           <div className="container">
-            <a href="https://recruit.waemployment.com/">
+            <a href={"home"}>
               <img src="./career_files/logo.svg" alt="Logo" width="72px" />
             </a>
           </div>
